@@ -1,4 +1,4 @@
-package tests;
+package tests.UI;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
@@ -24,13 +24,13 @@ public class BaseTest {
     @BeforeMethod
     @Description("Настройка браузера")
     public void setup() {
-        Configuration.timeout = 30000;
+        Configuration.timeout = 60000;
         Configuration.baseUrl = "https://app.qase.io";
         ChromeOptions options = new ChromeOptions();
         // увеличил таймаут потому что селенид ждет 30 секунд открытия страницы и падает
         Configuration.pageLoadTimeout = 120000;
         Configuration.browserCapabilities = options;
-        // перенес в tests.BaseTest залогин чтобы сократить тесты
+        // перенес в tests.UI.BaseTest залогин чтобы сократить тесты
         open("/login");
         // start-maximized не работает поэтому расширяю окно на весь экран по другому
         WebDriverRunner.getWebDriver().manage().window().maximize();

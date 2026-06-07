@@ -1,0 +1,17 @@
+package models.GetProjectResponce;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class GetProjectResponse {
+
+    @SerializedName("status")
+    @Expose
+    public Boolean status;
+    @SerializedName("result")
+    @Expose
+    public Result result;
+    @SerializedName("errorMessage")
+    @Expose
+    public String errorMessage;
+}
