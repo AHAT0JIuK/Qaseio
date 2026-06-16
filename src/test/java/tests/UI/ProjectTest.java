@@ -1,4 +1,4 @@
-package tests;
+package tests.UI;
 
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class ProjectTest extends BaseTest {
 
     private final String PROJECT_NAME = "123";
-    private final String PROJECT_CODE = "XXX";
+    private final String PROJECT_CODE = "ABC";
 
     @Test
     @Description("Проверка создания нового проекта")
